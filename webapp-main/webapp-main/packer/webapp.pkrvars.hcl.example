@@ -1,0 +1,12 @@
+# AWS Configuration
+aws_region = "us-east-1"
+ami_users  = ["AKIA3FFGMZYGXDRHEMMN"]
+
+# GCP Configuration
+gcp_project_id  = "dev-project-487215"
+gcp_zone        = "us-east1-b"
+gcp_image_sharing = ["protean-unity-487215-c4"]
+
+# Instance types for building
+instance_type    = "t2.micro"
+gcp_machine_type = "e2-medium"

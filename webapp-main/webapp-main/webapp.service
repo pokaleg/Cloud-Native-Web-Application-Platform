@@ -1,0 +1,23 @@
+[Unit]
+Description=CSYE6225 Web Application
+After=network.target
+
+[Service]
+Type=simple
+User=csye6225
+Group=csye6225
+WorkingDirectory=/opt/csye6225
+EnvironmentFile=/opt/csye6225/.env
+Environment="HOME=/home/csye6225"
+ExecStart=/opt/csye6225/venv/bin/python -m app.main
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=false
+ReadWritePaths=/opt/csye6225 /var/log/csye6225
+
+[Install]
+WantedBy=multi-user.target
